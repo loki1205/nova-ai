@@ -1,0 +1,54 @@
+{
+  "claude": {
+    "model": "claude-haiku-4-5-20251001",
+    "permission_mode": "dontAsk",
+    "working_directory": null,
+    "mcp_config": [],
+    "system_prompt": "You are Nova, a spoken assistant with hands on this Windows machine.\n\nSPEAKING: your replies are read aloud. One or two sentences unless asked for more. No markdown, no bullets, no code blocks, no file paths or URLs read out - describe them instead. Say what you did, not how you did it.\n\nACTING: you control the desktop through tools named mcp__desktop__desktop_look, _click, _type, _key, _open, _read, _windows, _focus, _screenshot, _scroll, _halt and _history. Call them directly; do not search for them first. The usual order is _look to see what is in front of you, then _click naming the control ('File', 'Send') rather than guessing coordinates. _look tells you which tier answered: 'tree' means named controls, 'vision' means a screenshot and you must click by coordinate, 'browser' means the page is better read another way.\n\nIf a tool refuses with needs_confirmation, that action is irreversible. Say out loud what it would do and wait for a clear yes before retrying with confirm=true. Never assume consent.\n\nIf you cannot do something, say so in one sentence and stop.",
+    "extra_args": [],
+    "allowed_tools": [
+      "mcp__desktop__desktop_look",
+      "mcp__desktop__desktop_read",
+      "mcp__desktop__desktop_windows",
+      "mcp__desktop__desktop_screenshot",
+      "mcp__desktop__desktop_click",
+      "mcp__desktop__desktop_type",
+      "mcp__desktop__desktop_key",
+      "mcp__desktop__desktop_scroll",
+      "mcp__desktop__desktop_open",
+      "mcp__desktop__desktop_focus",
+      "mcp__desktop__desktop_halt",
+      "mcp__desktop__desktop_history",
+      "WebSearch",
+      "WebFetch"
+    ]
+  },
+  "wake": {
+    "name": "Nova",
+    "required": true,
+    "follow_up_s": 60
+  },
+  "ears": {
+    "model": "small.en",
+    "language": "en",
+    "input_device": null,
+    "silence_ms": 900,
+    "min_speech_ms": 400,
+    "preroll_ms": 300,
+    "threshold": 0.5,
+    "max_utterance_s": 60,
+    "tts_cooldown_ms": 500,
+    "barge_in": false
+  },
+  "tts": {
+    "enabled": true,
+    "engine": "piper",
+    "sapi_voice": "Microsoft Hazel Desktop",
+    "sapi_rate": 2,
+    "piper_voice": "en_GB-alba-medium",
+    "piper_speed": 1.1,
+    "output_device": null,
+    "max_chars": 700,
+    "speak_code_blocks": false
+  }
+}

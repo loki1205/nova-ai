@@ -1,0 +1,19 @@
+# 1.8 GB of Whisper models and 60 MB of Piper voices. setup.ps1 fetches them.
+models/
+piper/
+
+# Everything the assistant has heard.
+#
+# ears.log is a verbatim transcript of every utterance in the room -- including
+# the ones it decided were not addressed to it and threw away. That is exactly
+# the material a privacy filter exists to protect, and it is not yours to
+# publish. The .wav files are synthesised test fixtures, but they live here too.
+state/
+
+.venv/
+__pycache__/
+*.pyc
+# Personal settings: which microphone, which voice, which working directory.
+# config.example.json is the tracked template; setup.ps1 copies it here on
+# first run, and so does load_config if you skip setup.
+config.json

@@ -1,0 +1,8 @@
+# Pinned to what this was built and tested against on Windows 11.
+faster-whisper==1.2.1
+onnxruntime==1.28.0
+sounddevice==0.5.5
+numpy==2.5.1
+piper-tts==1.6.0
+comtypes==1.4.16
+pywin32==312
